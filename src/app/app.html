@@ -1,0 +1,117 @@
+<main class="portfolio">
+  <section class="hero card">
+    <div class="hero-layout">
+      <div class="hero-content">
+        <p class="eyebrow">murachino</p>
+        <h1>Fhatuwani Nemavhulani</h1>
+        <h2>Systems &amp; Development Professional</h2>
+        <p class="subtitle">frontend developer • DevOps Engineer • Automation Tester</p>
+
+        <div class="cta">
+          <a class="btn primary" href="mailto:Nemavhulanifhatuwani@gmail.com">Get In Touch</a>
+          <a class="btn ghost" href="#experience">View Experience</a>
+        </div>
+
+        <div class="stats">
+          <article>
+            <span class="value">4+</span>
+            <span class="label">Years Experience</span>
+          </article>
+          <article>
+            <span class="value">15+</span>
+            <span class="label">Technologies</span>
+          </article>
+          <article>
+            <span class="value">6</span>
+            <span class="label">Certifications</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="container-hero">
+        <div class="hero-image">
+          <img src="/king.jpg" alt="Fhatuwani Nemavhulani" class="side-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>About Me</h3>
+    <p>
+      I am a dedicated systems and development professional with over 4 years of experience in technical support, DevOps,
+      and automation testing. My journey in technology has taken me from providing first-line help desk support to
+      developing and testing backend APIs and contributing to continuous integration pipelines.
+    </p>
+    <p>
+      With CompTIA A+, N+, and Cloud+ certifications, plus Server+ and Security+ in progress, I bring a strong
+      foundation in hardware, networking, cloud infrastructure, and system administration. My expertise spans across
+      multiple operating systems (Windows, macOS, Linux), network troubleshooting, and modern development/testing tools.
+    </p>
+    <p>
+      I am passionate about leveraging my skills to drive positive change and exceed organizational goals through support,
+      automation, and production monitoring.
+    </p>
+  </section>
+
+  <section id="experience" class="card">
+    <h3>Work Experience</h3>
+    <div class="stack">
+      @for (experience of experiences; track experience.role + experience.period) {
+        <article class="timeline-item">
+          <header>
+            <h4>{{ experience.role }}</h4>
+            <p class="company">{{ experience.company }}</p>
+            <p class="meta">{{ experience.duration }} • {{ experience.period }}</p>
+          </header>
+          <p>{{ experience.description }}</p>
+          <div class="tags">
+            @for (technology of experience.technologies; track technology) {
+              <span>{{ technology }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Technical Skills</h3>
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.title) {
+        <article class="skill-group">
+          <h4>{{ group.title }}</h4>
+          <ul>
+            @for (item of group.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Education &amp; Certifications</h3>
+    <div class="education-list">
+      @for (item of education; track item.title + item.year) {
+        <article class="education-item">
+          <h4>{{ item.title }}</h4>
+          <p class="meta">{{ item.year }} • {{ item.provider }}</p>
+          <p>{{ item.type }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="card contact">
+    <h3>Get In Touch</h3>
+    <p><strong>Email:</strong> <a href="mailto:Nemavhulanifhatuwani@gmail.com">Nemavhulanifhatuwani&#64;gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:0798510306">079 851 0306</a></p>
+    <p><strong>Location:</strong> Lufhereng, Johannesburg, South Africa</p>
+    <p class="contact-note">
+      I am looking for stimulating roles where I can leverage my skills and knowledge to drive positive change and exceed
+      organizational goals. Let's connect.
+    </p>
+  </section>
+</main>
